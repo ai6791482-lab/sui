@@ -2,87 +2,122 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>武舟會 日本武道会</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本武道国際連盟 - JBIF</title>
 <style>
-  body, html {
-    margin: 0; padding: 0;
-    font-family: "Noto Serif JP", serif;
-    background: #f9f9f9;
-    color: #333;
-    scroll-behavior: smooth;
-  }
+/* 全体 */
+body, html {
+  margin: 0; padding: 0;
+  font-family: "Noto Serif JP", serif;
+  background: #f9f9f9;
+  color: #333;
+  scroll-behavior: smooth;
+}
 
+/* ヘッダー */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #111;
+  color: #fff;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+header .logo {
+  width: 80px;
+}
+header h1 {
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  flex: 1;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+nav a {
+  color: #fff;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s;
+}
+nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ffcccb;
+  transition: width 0.3s;
+  margin: 0 auto;
+}
+nav a:hover::after { width: 100%; }
+nav a:hover { color: #ffcccb; }
+
+/* セクション */
+.section {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-left: 6px solid #800000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section h2 {
+  color: #800000;
+  margin-bottom: 1rem;
+}
+.section p {
+  line-height: 1.8;
+}
+
+/* フッター */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
   header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #111;
-    color: #fff;
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    flex-direction: column;
+    align-items: flex-start;
   }
-
-  header .logo { width: 80px; }
-  header h1 { margin: 0 2rem; font-size: 1.8rem; }
-
-  nav { display: flex; }
   nav a {
-    color: #fff;
-    margin-left: 1.5rem;
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
-    transition: color 0.3s;
+    margin: 0.5rem 0 0 0;
   }
-  nav a::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #ffcccb;
-    transition: width 0.3s;
-    margin: 0 auto;
-  }
-  nav a:hover::after { width: 100%; }
-  nav a:hover { color: #ffcccb; }
-
   .section {
-    max-width: 1000px;
-    margin: 4rem auto;
-    padding: 2rem 3rem;
-    background: #fff;
-    border-left: 6px solid #800000;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 1s ease;
+    margin: 2rem 1rem;
+    padding: 1.5rem;
   }
-  .section.show { opacity: 1; transform: translateY(0); }
-
-  .section h2 { color: #800000; margin-bottom: 1rem; }
-  .section p { line-height: 1.8; }
-
-  footer {
-    background: #111;
-    color: #fff;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
+}
 </style>
 </head>
 <body>
 
 <header>
   <img src="https://daikitakahashi811-cbsml.wordpress.com/wp-content/uploads/2025/07/img_0013.png" alt="道場ロゴ" class="logo">
-  <h1>武舟會 日本武道会</h1>
+  <h1>日本武道国際連盟</h1>
   <nav>
     <a href="#home">ホーム</a>
     <a href="#philosophy">理念</a>
     <a href="#history">歴史</a>
     <a href="#activities">活動</a>
-    <a href="#members">会員</a>
+    <a href="#members">会員団体</a>
     <a href="#contact">お問い合わせ</a>
   </nav>
 </header>
@@ -121,20 +156,20 @@
 </section>
 
 <footer>
-  <p>&copy; 2025 武舟會 日本武道会 - All Rights Reserved</p>
+  <p>&copy; 2025 日本武道国際連盟 - All Rights Reserved</p>
 </footer>
 
 <script>
-  // スクロール時のフェードイン
-  const sections = document.querySelectorAll('.section');
-  window.addEventListener('scroll', () => {
-    sections.forEach(sec => {
-      const rect = sec.getBoundingClientRect();
-      if(rect.top < window.innerHeight * 0.85){
-        sec.classList.add('show');
-      }
-    });
+// スクロール時にフェードインするアニメーション
+const sections = document.querySelectorAll('.section');
+window.addEventListener('scroll', () => {
+  sections.forEach(sec => {
+    const rect = sec.getBoundingClientRect();
+    if(rect.top < window.innerHeight * 0.85){
+      sec.classList.add('show');
+    }
   });
+});
 </script>
 
 </body>
