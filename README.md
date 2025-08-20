@@ -27,18 +27,9 @@ header {
   z-index: 1000;
   flex-wrap: wrap;
 }
-header .logo {
-  width: 80px;
-}
-header h1 {
-  margin: 0 1rem;
-  font-size: 1.5rem;
-  flex: 1;
-}
-nav {
-  display: flex;
-  flex-wrap: wrap;
-}
+header .logo { width: 80px; }
+header h1 { margin: 0 1rem; font-size: 1.5rem; flex: 1; }
+nav { display: flex; flex-wrap: wrap; }
 nav a {
   color: #fff;
   margin-left: 1rem;
@@ -71,17 +62,9 @@ nav a:hover { color: #ffcccb; }
   transform: translateY(40px);
   transition: all 1s ease;
 }
-.section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-.section h2 {
-  color: #800000;
-  margin-bottom: 1rem;
-}
-.section p {
-  line-height: 1.8;
-}
+.section.show { opacity: 1; transform: translateY(0); }
+.section h2 { color: #800000; margin-bottom: 1rem; }
+.section p { line-height: 1.8; }
 
 /* フッター */
 footer {
@@ -93,17 +76,9 @@ footer {
 
 /* スマホ対応 */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  nav a {
-    margin: 0.5rem 0 0 0;
-  }
-  .section {
-    margin: 2rem 1rem;
-    padding: 1.5rem;
-  }
+  header { flex-direction: column; align-items: flex-start; }
+  nav a { margin: 0.5rem 0 0 0; }
+  .section { margin: 2rem 1rem; padding: 1.5rem; }
 }
 </style>
 </head>
@@ -114,45 +89,60 @@ footer {
   <h1>日本武道国際連盟</h1>
   <nav>
     <a href="#home">ホーム</a>
-    <a href="#philosophy">理念</a>
+    <a href="#about">私たちについて</a>
+    <a href="#structure">組織構成</a>
+    <a href="#members">加盟国・会員</a>
     <a href="#history">歴史</a>
-    <a href="#activities">活動</a>
-    <a href="#members">会員団体</a>
     <a href="#contact">お問い合わせ</a>
   </nav>
 </header>
 
 <section class="section" id="home">
   <h2>ホーム</h2>
-  <p>武道とは単なる技術やスポーツではなく、尊敬、規律、調和を重んじる「心の道」です。</p>
+  <p>Japan Budō International Federation（日本武道国際連盟®）は、全日本武道協会（AJBA）の正式な後継組織です。世界中の武道家が自主的・非政府・非政治・非営利の活動を通じて、日本における教育と修練を継続できるよう設立された国際連盟です。</p>
+  <p>事務局はセルビアにあり、本部道場は日本にあります。</p>
 </section>
 
-<section class="section" id="philosophy">
-  <h2>理念</h2>
-  <p>• 武道の精神と技術の継承<br>
-     • 国際交流<br>
-     • 青少年の人格形成<br>
-     • 世界平和への貢献</p>
+<section class="section" id="about">
+  <h2>私たちについて</h2>
+  <p>JBIFは有資格者に昇級・昇段の認定や称号授与を行います。すべての認定書は日本発行です。</p>
 </section>
 
 <section class="section" id="history">
-  <h2>歴史</h2>
-  <p>剣道、柔道、空手道、合気道、弓道など、武道は何世代にも渡って継承されてきました。</p>
+  <h2>AJBA – JBIFの歴史</h2>
+  <p>全日本武道協会（AJBA）は素晴らしい歴史と実績を持つ組織です。JBIFは、その活動の新しい章を象徴し、国際的な舞台での活動に重点を置いています。</p>
 </section>
 
-<section class="section" id="activities">
-  <h2>活動</h2>
-  <p>国際大会、交流イベント、指導者育成、加盟団体との協力を通じて、武道の発展と世界理解を推進しています。</p>
+<section class="section" id="structure">
+  <h2>組織構成・国際連携</h2>
+  <p>日本武道の文化遺産を保護し、国際的な組織と連携して普及・推進します。</p>
+  <p>全ての会員や師範は、日本に拠点を置く主管師範会による認定を受ける機会があります。</p>
+  <p>JBIFは、日本文化および侍の伝統を保護・広めることに努めます。</p>
 </section>
 
 <section class="section" id="members">
-  <h2>会員団体</h2>
-  <p>国内外の武道団体が共通の理念のもとに参加し、協力しています。</p>
+  <h2>日本伝統武道</h2>
+  <p>国際機関に代表者を持たない全ての伝統武道を統合しています。</p>
+  <ul>
+    <li>合気武道 – 合気柔術</li>
+    <li>古武道 – 古武術</li>
+    <li>空手道</li>
+    <li>日本柔術</li>
+    <li>日本拳法</li>
+    <li>剣術</li>
+  </ul>
+
+  <h3>本部スタッフ</h3>
+  <p>会長（石井 英治 教授 / SoShihan）<br>
+  副会長（朝見 松舟 教授 / DaiShihan）<br>
+  CEO（Mladen Burazerovic 教授 / Shihan）<br>
+  名誉副会長（Brett Mayfield 教授 / Dirk Klok 氏 / 斎藤 健一 氏）</p>
 </section>
 
 <section class="section" id="contact">
   <h2>お問い合わせ</h2>
-  <p>入会・取材・問い合わせは以下まで:<br>📧 info@japanbudo.or.jp</p>
+  <p>JBIF組織に参加し、認定を受けたい方はお問い合わせください。Facebookからも可能です。<br>
+  📧 info@japanbudo.or.jp</p>
 </section>
 
 <footer>
@@ -160,7 +150,7 @@ footer {
 </footer>
 
 <script>
-// スクロール時にフェードインするアニメーション
+// スクロール時にフェードイン
 const sections = document.querySelectorAll('.section');
 window.addEventListener('scroll', () => {
   sections.forEach(sec => {
