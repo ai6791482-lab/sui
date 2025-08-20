@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>武舟會 日本武道会</title>
 <style>
-  /* 全体 */
+  /* 全体設定 */
   body, html {
     margin: 0; padding: 0;
     font-family: "Noto Serif JP", serif;
@@ -29,6 +29,7 @@
   header .logo {
     width: 80px;
   }
+
   header h1 {
     margin: 0 2rem;
     font-size: 1.8rem;
@@ -37,6 +38,7 @@
   nav {
     display: flex;
   }
+
   nav a {
     color: #fff;
     margin-left: 1.5rem;
@@ -45,6 +47,7 @@
     position: relative;
     transition: color 0.3s;
   }
+
   nav a::after {
     content: "";
     display: block;
@@ -54,8 +57,14 @@
     transition: width 0.3s;
     margin: 0 auto;
   }
-  nav a:hover::after { width: 100%; }
-  nav a:hover { color: #ffcccb; }
+
+  nav a:hover::after {
+    width: 100%;
+  }
+
+  nav a:hover {
+    color: #ffcccb;
+  }
 
   /* セクション */
   .section {
@@ -69,6 +78,7 @@
     transform: translateY(40px);
     transition: all 1s ease;
   }
+
   .section.show {
     opacity: 1;
     transform: translateY(0);
@@ -78,6 +88,7 @@
     color: #800000;
     margin-bottom: 1rem;
   }
+
   .section p {
     line-height: 1.8;
   }
@@ -144,7 +155,7 @@
 </footer>
 
 <script>
-  // スクロール時のフェードイン
+  // スクロールでフェードイン
   const sections = document.querySelectorAll('.section');
   window.addEventListener('scroll', () => {
     sections.forEach(sec => {
