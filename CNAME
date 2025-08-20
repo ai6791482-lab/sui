@@ -1,1 +1,54 @@
-dui.com
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>日本武道会 - 公式サイト</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">日本武道会</div>
+    <nav>
+      <ul>
+        <li><a href="#about">概要</a></li>
+        <li><a href="#history">歴史</a></li>
+        <li><a href="#activities">活動</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h1>日本武道会について</h1>
+    <p>
+      日本武道会は、武道の普及と継承を目的に活動している団体です。
+      日本の伝統文化である武道を世界に広め、青少年の健全育成を目指しています。
+    </p>
+  </section>
+
+  <section id="history">
+    <h1>歴史</h1>
+    <p>
+      日本武道会は○○年に設立され、国内外で多くの武道イベントや国際交流を行ってきました。
+    </p>
+  </section>
+
+  <section id="activities">
+    <h1>活動内容</h1>
+    <ul>
+      <li>全国大会・演武会の開催</li>
+      <li>国際交流プログラム</li>
+      <li>指導者育成セミナー</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h1>お問い合わせ</h1>
+    <p>Email: info@example.com</p>
+  </section>
+
+  <footer>
+    <p>© 2025 日本武道会</p>
+  </footer>
+</body>
+</html>
