@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <title>武舟會 日本武道会</title>
 <style>
-  /* 全体設定 */
   body, html {
     margin: 0; padding: 0;
     font-family: "Noto Serif JP", serif;
@@ -13,7 +12,6 @@
     scroll-behavior: smooth;
   }
 
-  /* ヘッダー */
   header {
     display: flex;
     align-items: center;
@@ -26,19 +24,10 @@
     z-index: 1000;
   }
 
-  header .logo {
-    width: 80px;
-  }
+  header .logo { width: 80px; }
+  header h1 { margin: 0 2rem; font-size: 1.8rem; }
 
-  header h1 {
-    margin: 0 2rem;
-    font-size: 1.8rem;
-  }
-
-  nav {
-    display: flex;
-  }
-
+  nav { display: flex; }
   nav a {
     color: #fff;
     margin-left: 1.5rem;
@@ -47,7 +36,6 @@
     position: relative;
     transition: color 0.3s;
   }
-
   nav a::after {
     content: "";
     display: block;
@@ -57,16 +45,9 @@
     transition: width 0.3s;
     margin: 0 auto;
   }
+  nav a:hover::after { width: 100%; }
+  nav a:hover { color: #ffcccb; }
 
-  nav a:hover::after {
-    width: 100%;
-  }
-
-  nav a:hover {
-    color: #ffcccb;
-  }
-
-  /* セクション */
   .section {
     max-width: 1000px;
     margin: 4rem auto;
@@ -78,22 +59,11 @@
     transform: translateY(40px);
     transition: all 1s ease;
   }
+  .section.show { opacity: 1; transform: translateY(0); }
 
-  .section.show {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  .section h2 { color: #800000; margin-bottom: 1rem; }
+  .section p { line-height: 1.8; }
 
-  .section h2 {
-    color: #800000;
-    margin-bottom: 1rem;
-  }
-
-  .section p {
-    line-height: 1.8;
-  }
-
-  /* フッター */
   footer {
     background: #111;
     color: #fff;
@@ -155,7 +125,7 @@
 </footer>
 
 <script>
-  // スクロールでフェードイン
+  // スクロール時のフェードイン
   const sections = document.querySelectorAll('.section');
   window.addEventListener('scroll', () => {
     sections.forEach(sec => {
